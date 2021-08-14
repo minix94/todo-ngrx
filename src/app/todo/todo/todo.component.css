@@ -1,0 +1,70 @@
+.todoContainer {
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: white;
+}
+.container {
+  width: 35%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.titlerow {
+  display: flex;
+  justify-content: space-between;
+}
+.input {
+  background-color: white;
+  border: 1px solid black;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  margin-bottom: 1.5rem;
+}
+.titlePage {
+  margin-bottom: 2.5rem;
+  font-size: 2.5rem;
+  color: white;
+}
+input {
+  height: 100%;
+  border: none;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.todoList {
+  padding: 0;
+  margin: 0;
+}
+.icon {
+  border-radius: 50%;
+  margin: 15px;
+  background: linear-gradient(to right, rgb(87, 221, 255), rgb(192, 88, 243));
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.todoItem {
+  list-style-type: none;
+  border-bottom: 1px solid black;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+}
+
+.footerList {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+}
+.footerItem {
+  list-style-type: none;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+}
