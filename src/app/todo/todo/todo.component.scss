@@ -1,0 +1,52 @@
+.todoContainer {
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: #80808061 0px 0px 20px 0px;
+}
+.container {
+  width: 35%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.titlerow {
+  display: flex;
+  justify-content: space-between;
+}
+
+.titlePage {
+  margin-bottom: 2.5rem;
+  font-size: 2.5rem;
+  color: white;
+}
+
+
+
+.footerList {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+}
+
+
+.darkMode{
+  background-color: rgb(12, 11, 11);
+
+}
+
+.theme-light {
+  --primary: #2577c1;
+  --secondary-bg: #fff;
+  --color-primary: #000;
+  --color-dull: #767676;
+  --theme: #fff;
+}
+.theme-dark {
+  --primary: #424242;
+  --secondary-bg: #424242;
+  --color-primary: #fff;
+  --color-dull: #f5f5f5;
+  --theme: #424242;
+}

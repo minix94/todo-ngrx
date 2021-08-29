@@ -1,0 +1,18 @@
+<ul [ngSwitch]="(todoCurrentState$ | async).type" class="todoList">
+  <ng-container *ngSwitchCase= "'All'">
+    <todo-item  [completed]="todo.completed" [selected]="todo.selected" [id]="todo.id" [title]="todo.title" *ngFor="let todo of todo$ | async; index as i">
+
+  </todo-item>
+</ng-container>
+<ng-container *ngSwitchCase= "'Completed'">
+  <todo-item  [completed]="todo.completed" [selected]="todo.selected" [id]="todo.id" [title]="todo.title" *ngFor="let todo of todoFiltered$ | async; index as i">
+
+</todo-item>
+</ng-container>
+<ng-container *ngSwitchCase= "'Active'">
+  <todo-item  [completed]="todo.completed" [selected]="todo.selected" [id]="todo.id" [title]="todo.title" *ngFor="let todo of todoActive$ | async; index as i">
+
+</todo-item>
+</ng-container>
+
+</ul>

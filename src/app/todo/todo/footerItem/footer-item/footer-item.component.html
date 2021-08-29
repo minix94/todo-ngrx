@@ -1,0 +1,7 @@
+<li *ngIf="status;else noStatus"      [ngClass]="status === (todoStatustype$| async).type ? ['footerItem','active'] : 'footerItem'" (click)='select(status)'>
+  {{ status }}
+</li>
+
+<ng-template #noStatus>
+  <li class="footerItem" >{{title}}</li>
+</ng-template>

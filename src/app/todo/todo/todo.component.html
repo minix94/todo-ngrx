@@ -1,7 +1,7 @@
 <div class="container">
   <div class="titlerow">
     <h1 class="titlePage">T O D O</h1>
-    <span
+    <span (click)="changeTheme()"
       ><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26">
         <path
           fill="#FFF"
@@ -12,129 +12,17 @@
     </span>
   </div>
 
-  <div class="input">
-    <span class="icon active"
-      ><svg xmlns="http://www.w3.org/2000/svg" width="11" height="9">
-        <path
-          fill="none"
-          stroke="#FFF"
-          stroke-width="2"
-          d="M1 4.304L3.696 7l6-6"
-        /></svg></span
-    ><input type="text" placeholder="Create a new todo..." #input />
-  </div>
+  <todo-input [title]="'Create a new Todo...'"></todo-input>
 
   <div class="todoContainer">
-    <ul class="todoList">
-      <li class="todoItem">
-        <span class="icon"
-          ><svg xmlns="http://www.w3.org/2000/svg" width="11" height="9">
-            <path
-              fill="none"
-              stroke="#FFF"
-              stroke-width="2"
-              d="M1 4.304L3.696 7l6-6"
-            /></svg></span
-        >Complete online Javascript
-
-        <span class="icon2">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18">
-            <path
-              fill="#494C6B"
-              fill-rule="evenodd"
-              d="M16.97 0l.708.707L9.546 8.84l8.132 8.132-.707.707-8.132-8.132-8.132 8.132L0 16.97l8.132-8.132L0 .707.707 0 8.84 8.132 16.971 0z"
-            />
-          </svg>
-        </span>
-      </li>
-      <li class="todoItem">
-        <span class="icon"
-          ><svg xmlns="http://www.w3.org/2000/svg" width="11" height="9">
-            <path
-              fill="none"
-              stroke="#FFF"
-              stroke-width="2"
-              d="M1 4.304L3.696 7l6-6"
-            /></svg></span
-        >Jog around the park 3x
-        <span class="icon2">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18">
-            <path
-              fill="#494C6B"
-              fill-rule="evenodd"
-              d="M16.97 0l.708.707L9.546 8.84l8.132 8.132-.707.707-8.132-8.132-8.132 8.132L0 16.97l8.132-8.132L0 .707.707 0 8.84 8.132 16.971 0z"
-            />
-          </svg>
-        </span>
-      </li>
-      <li class="todoItem">
-        <span class="icon"
-          ><svg xmlns="http://www.w3.org/2000/svg" width="11" height="9">
-            <path
-              fill="none"
-              stroke="#FFF"
-              stroke-width="2"
-              d="M1 4.304L3.696 7l6-6"
-            /></svg></span
-        >10 minutes meditation
-        <span class="icon2">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18">
-            <path
-              fill="#494C6B"
-              fill-rule="evenodd"
-              d="M16.97 0l.708.707L9.546 8.84l8.132 8.132-.707.707-8.132-8.132-8.132 8.132L0 16.97l8.132-8.132L0 .707.707 0 8.84 8.132 16.971 0z"
-            />
-          </svg>
-        </span>
-      </li>
-      <li class="todoItem">
-        <span class="icon"
-          ><svg xmlns="http://www.w3.org/2000/svg" width="11" height="9">
-            <path
-              fill="none"
-              stroke="#FFF"
-              stroke-width="2"
-              d="M1 4.304L3.696 7l6-6"
-            /></svg></span
-        >Read for 1 hour
-        <span class="icon2">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18">
-            <path
-              fill="#494C6B"
-              fill-rule="evenodd"
-              d="M16.97 0l.708.707L9.546 8.84l8.132 8.132-.707.707-8.132-8.132-8.132 8.132L0 16.97l8.132-8.132L0 .707.707 0 8.84 8.132 16.971 0z"
-            />
-          </svg>
-        </span>
-      </li>
-      <li class="todoItem">
-        <span class="icon"
-          ><svg xmlns="http://www.w3.org/2000/svg" width="11" height="9">
-            <path
-              fill="none"
-              stroke="#FFF"
-              stroke-width="2"
-              d="M1 4.304L3.696 7l6-6"
-            /></svg></span
-        >Pick up groceries
-        <span class="icon2">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18">
-            <path
-              fill="#494C6B"
-              fill-rule="evenodd"
-              d="M16.97 0l.708.707L9.546 8.84l8.132 8.132-.707.707-8.132-8.132-8.132 8.132L0 16.97l8.132-8.132L0 .707.707 0 8.84 8.132 16.971 0z"
-            />
-          </svg>
-        </span>
-      </li>
-    </ul>
+      <todo-list></todo-list>
     <div>
       <ul class="footerList">
-        <li class="footerItem active">5 items left</li>
-        <li class="footerItem">All</li>
-        <li class="footerItem">Active</li>
-        <li class="footerItem">Completed</li>
-        <li class="footerItem">Clear Completed</li>
+        <footer-item [title]=" (todolength$ | async) + ' items left'"></footer-item>
+        <footer-item
+          *ngFor="let statusTodo of status "
+          [status]="statusTodo"
+        ></footer-item>
       </ul>
     </div>
   </div>
