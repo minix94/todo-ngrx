@@ -25,7 +25,7 @@ export const todoReducer = createReducer(
   })),
   on(todoAction.deleteTodo, (state, action) => ({
     ...state,
-    todo: state.todo.filter((_, index) => index !== action.index),
+    todo: state.todo.filter((res) => res.id !== action.index),
   })),
 
   on(todoAction.updateTodo, (state, action) => (

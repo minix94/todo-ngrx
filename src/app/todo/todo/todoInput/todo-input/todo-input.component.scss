@@ -1,4 +1,4 @@
-.input {
+.inputContainer {
   background-color: white;
   height: 3rem;
   display: flex;
@@ -6,30 +6,35 @@
   border-radius: 5px;
   margin-bottom: 1.5rem;
   box-shadow: #80808061 0px 0px 20px 0px;
+  .inputBox {
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-family: "Josefin Sans", sans-serif;
+    &:focus{
+      outline: none;
+    }
+  }
+  .icon {
+    border-radius: 50%;
+    margin: 15px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid gray;
+    cursor: pointer;
+    &:hover{
+      border-color: rgb(192, 88, 243);
+    }
+    &.active{
+      background: linear-gradient(to right, rgb(87, 221, 255), rgb(192, 88, 243));
+      border: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
 }
-input {
-  height: 100%;
-  border: none;
-  font-family: "Josefin Sans", sans-serif;
-}
-input:focus {
-  outline: none;
-}
-.icon {
-  border-radius: 50%;
-  margin: 15px;
-  width: 20px;
-  height: 20px;
-  border: 1px solid gray;
-  cursor: pointer;
-}
-.icon:hover {
-  border-color: rgb(192, 88, 243);
-}
-.icon.active {
-  background: linear-gradient(to right, rgb(87, 221, 255), rgb(192, 88, 243));
-  border: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
+
+
+

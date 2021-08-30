@@ -5,13 +5,15 @@
   align-items: center;
   cursor: pointer;
   color: gray;
-}
+  &:hover{
+    color: black;
 
-.footerItem:hover {
-  color: black;
-}
-.footerItem.active {
-  background: -webkit-linear-gradient(rgb(87, 221, 255), rgb(192, 88, 243));
+  }
+  &.active{
+    background: -webkit-linear-gradient(rgb(87, 221, 255), rgb(192, 88, 243));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  }
 }
+
+
