@@ -1,2 +1,4 @@
-<img src="../assets/images/bg-desktop-light.jpg" alt="" />
+<div class="{{currentTheme$ | async}} background">
+<img [src]="(currentTheme$ | async)==='theme-light' ? '../assets/images/bg-desktop-light.jpg' : '../assets/images/bg-desktop-dark.jpg' " alt="" />
 <app-todo></app-todo>
+</div>

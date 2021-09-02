@@ -10,7 +10,7 @@ export class ChangeThemeService {
     presentTheme$: Observable<string> = this.presentThemeSubject.asObservable();
     constructor() {}
 
-    changeTheme(theme) {
+    changeTheme(theme:string) {
       this.presentThemeSubject.next(theme);
     }
   }

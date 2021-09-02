@@ -12,12 +12,18 @@
     height: 20px;
     border: 1px solid gray;
     cursor: pointer;
+    svg{
+      display: none;
+    }
     &.active{
       background: linear-gradient(to right, rgb(87, 221, 255), rgb(192, 88, 243));
       border: none;
       display: flex;
       justify-content: center;
       align-items: center;
+      svg{
+        display: inline;
+      }
     }
     &:hover{
       border-color: rgb(192, 88, 243);
@@ -38,6 +44,7 @@
   }
 
 .todoTitle{
+  color:var(--colorFont);
   &.completed{
     text-decoration: line-through;
     opacity: 0.3;

@@ -16,14 +16,15 @@
   }
   .todoContainer {
     border-radius: 5px;
-    background-color: white;
+    background-color: var(--todo);
     box-shadow: #80808061 0px 0px 20px 0px;
 
   .footerList {
     display: flex;
     justify-content: space-between;
     padding: 0;
-    margin: 0;
+    margin: 0 10px ;
+
   }
   }
 }

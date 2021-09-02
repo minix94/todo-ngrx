@@ -1,4 +1,6 @@
+import { Observable } from 'rxjs';
 import { Component } from '@angular/core';
+import { ChangeThemeService } from 'src/services/change-theme.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'todoAppNgrx';
+  currentTheme$:Observable<string> = this.theme.presentTheme$;
+  constructor(private theme:ChangeThemeService){
+
+  }
+
 }

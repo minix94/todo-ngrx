@@ -4,13 +4,13 @@
   display: flex;
   align-items: center;
   cursor: pointer;
-  color: gray;
+  color: var(--secondaryColor);
   &:hover{
-    color: black;
+    color: var(--colorFont);
 
   }
   &.active{
-    background: -webkit-linear-gradient(rgb(87, 221, 255), rgb(192, 88, 243));
+  background: -webkit-linear-gradient(rgb(87, 221, 255), rgb(192, 88, 243));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   }
