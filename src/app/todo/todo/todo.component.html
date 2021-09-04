@@ -22,13 +22,7 @@
   <div class="todoContainer">
       <todo-list></todo-list>
     <div>
-      <ul class="footerList">
-        <footer-item [title]=" (todolength$ | async) + ' items left'"></footer-item>
-        <footer-item
-          *ngFor="let statusTodo of status "
-          [status]="statusTodo"
-        ></footer-item>
-      </ul>
+      <footer-list></footer-list>
     </div>
   </div>
 </div>

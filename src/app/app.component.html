@@ -1,4 +1,4 @@
 <div class="{{currentTheme$ | async}} background">
-<img [src]="(currentTheme$ | async)==='theme-light' ? '../assets/images/bg-desktop-light.jpg' : '../assets/images/bg-desktop-dark.jpg' " alt="" />
+  <div  [ngClass]="(currentTheme$ | async)==='theme-light' ? ['background-image','bg-light'] : ['background-image','bg-dark']"></div>
 <app-todo></app-todo>
 </div>

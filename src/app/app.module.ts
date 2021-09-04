@@ -13,9 +13,10 @@ import { TodoItemComponent } from './todo/todo/todoItem/todo-item/todo-item.comp
 import { FooterItemComponent } from './todo/todo/footerItem/footer-item/footer-item.component';
 import { TodoInputComponent } from './todo/todo/todoInput/todo-input/todo-input.component';
 import { TodoListComponent } from './todo/todo/todoList/todo-list/todo-list.component';
+import { FooterListComponent } from './todo/todo/footer-list/footer-list.component';
 
 @NgModule({
-  declarations: [AppComponent, TodoComponent, TodoItemComponent, FooterItemComponent, TodoInputComponent, TodoListComponent],
+  declarations: [AppComponent, TodoComponent, TodoItemComponent, FooterItemComponent, TodoInputComponent, TodoListComponent, FooterListComponent],
   imports: [
     BrowserModule,
     StoreModule.forRoot({ todo: fromTodo.todoReducer }),
