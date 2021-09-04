@@ -5,20 +5,18 @@
   align-items: center;
   cursor: pointer;
   color: var(--secondaryColor);
-  &:hover{
+  &:hover {
     color: var(--colorFont);
-
   }
-  &.active{
-  background: -webkit-linear-gradient(rgb(87, 221, 255), rgb(192, 88, 243));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  &.active {
+    background: -webkit-linear-gradient(rgb(87, 221, 255), rgb(192, 88, 243));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }
 
 @media only screen and (max-width: 600px) {
-  .footerItem{
+  .footerItem {
     font-size: 0.8rem;
   }
-
 }

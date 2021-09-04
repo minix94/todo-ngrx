@@ -9,10 +9,7 @@ import { ChangeThemeService } from 'src/services/change-theme.service';
 })
 export class AppComponent {
   title = 'todoAppNgrx';
-  currentTheme$:Observable<string> = this.theme.presentTheme$;
+  currentTheme$: Observable<string> = this.theme.presentTheme$;
 
-  constructor(private theme:ChangeThemeService){
-
-  }
-
+  constructor(private theme: ChangeThemeService) {}
 }

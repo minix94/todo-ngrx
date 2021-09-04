@@ -1,4 +1,10 @@
-<div class="{{currentTheme$ | async}} background">
-  <div  [ngClass]="(currentTheme$ | async)==='theme-light' ? ['background-image','bg-light'] : ['background-image','bg-dark']"></div>
-<app-todo></app-todo>
+<div class="{{ currentTheme$ | async }} background">
+  <div
+    [ngClass]="
+      (currentTheme$ | async) === 'theme-light'
+        ? ['background-image', 'bg-light']
+        : ['background-image', 'bg-dark']
+    "
+  ></div>
+  <app-todo></app-todo>
 </div>

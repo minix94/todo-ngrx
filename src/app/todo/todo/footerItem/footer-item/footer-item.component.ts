@@ -14,17 +14,20 @@ import * as fromApp from '../../../../store/app.reducer';
 export class FooterItemComponent implements OnInit {
   @Input() status: string;
   @Input() title: string;
-  todoStatustype$:Observable<statusModel> = this.store.pipe(select(getTodoStatus))
+  todoStatustype$: Observable<statusModel> = this.store.pipe(
+    select(getTodoStatus)
+  );
 
-  constructor(private store:Store<fromApp.AppState>) {}
+  constructor(private store: Store<fromApp.AppState>) {}
 
-
-  select(status:string){
-    if(status === "Clear Completed"){
-      this.store.dispatch(clearTodoCompleted())
-    }else{
-          this.store.dispatch(setStatus({status:{type:status,status:true}}))
-        }
+  select(status: string) {
+    if (status === 'Clear Completed') {
+      this.store.dispatch(clearTodoCompleted());
+    } else {
+      this.store.dispatch(
+        setStatus({ status: { type: status, status: true } })
+      );
+    }
   }
   ngOnInit(): void {}
 }

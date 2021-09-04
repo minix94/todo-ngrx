@@ -12,22 +12,25 @@
     height: 20px;
     border: 1px solid gray;
     cursor: pointer;
-    svg{
+    svg {
       display: none;
     }
-    &.active{
-      background: linear-gradient(to right, rgb(87, 221, 255), rgb(192, 88, 243));
+    &.active {
+      background: linear-gradient(
+        to right,
+        rgb(87, 221, 255),
+        rgb(192, 88, 243)
+      );
       border: none;
       display: flex;
       justify-content: center;
       align-items: center;
-      svg{
+      svg {
         display: inline;
       }
     }
-    &:hover{
+    &:hover {
       border-color: rgb(192, 88, 243);
-
     }
   }
 
@@ -35,8 +38,8 @@
     display: none;
     justify-self: flex-end;
   }
-  &:hover{
-    .icon2{
+  &:hover {
+    .icon2 {
       display: inline;
       position: absolute;
       right: 0;
@@ -44,28 +47,22 @@
     }
   }
 
-.todoTitle{
-  color:var(--colorFont);
-  &.completed{
-    text-decoration: line-through;
-    opacity: 0.3;
+  .todoTitle {
+    color: var(--colorFont);
+    &.completed {
+      text-decoration: line-through;
+      opacity: 0.3;
+    }
   }
-}
 }
 
 @media only screen and (max-width: 600px) {
   .todoItem {
-
-
-    .icon2{
+    .icon2 {
       display: inline;
       position: absolute;
       right: 0;
       padding: 0 1rem;
+    }
   }
 }
-}
-
-
-
-

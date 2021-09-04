@@ -21,9 +21,9 @@ export class TodoItemComponent implements OnInit {
   status: boolean = false;
   todo: todo[];
 
-  todo$: Subscription = this.store
-    .pipe(select(getTodos))
-    .subscribe((res) => {this.todo = res});
+  todo$: Subscription = this.store.pipe(select(getTodos)).subscribe((res) => {
+    this.todo = res;
+  });
 
   constructor(private store: Store<fromApp.AppState>) {}
 
@@ -39,24 +39,23 @@ export class TodoItemComponent implements OnInit {
     this.store.dispatch(deleteTodo({ index }));
   }
   updateTodo(index: number) {
-
-  this.todo.map((res) => {
+    this.todo.map((res) => {
       if (res.id === index) {
-      const todos= [...this.todo];
+        const todos = [...this.todo];
 
-        todos[index]= {...res, selected: !res.selected,completed: !res.completed }
+        todos[index] = {
+          ...res,
+          selected: !res.selected,
+          completed: !res.completed,
+        };
 
-
-
-       this.store.dispatch(
+        this.store.dispatch(
           updateTodo({
             todos: todos,
           })
         );
-
-      }
-      else{
-        res
+      } else {
+        res;
       }
     });
   }

@@ -1,13 +1,18 @@
 <li class="todoItem">
-  <span [ngClass]="selected ? ['icon', 'active']:'icon'" (click)="updateTodo(id)"
+  <span
+    [ngClass]="selected ? ['icon', 'active'] : 'icon'"
+    (click)="updateTodo(id)"
     ><svg xmlns="http://www.w3.org/2000/svg" width="11" height="9">
       <path
         fill="none"
         stroke="#FFF"
         stroke-width="2"
         d="M1 4.304L3.696 7l6-6"
-      /></svg></span
-  ><p [ngClass]="completed ? ['todoTitle', 'completed'] : 'todoTitle'">{{ title }}</p>
+      /></svg
+  ></span>
+  <p [ngClass]="completed ? ['todoTitle', 'completed'] : 'todoTitle'">
+    {{ title }}
+  </p>
 
   <span (click)="deleteTodo(id)" class="icon2">
     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18">

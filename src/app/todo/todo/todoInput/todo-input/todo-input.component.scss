@@ -1,5 +1,5 @@
 .inputContainer {
-  background-color:var(--todo);
+  background-color: var(--todo);
   height: 3rem;
   display: flex;
   align-items: center;
@@ -7,16 +7,16 @@
   margin-bottom: 1.5rem;
   box-shadow: #80808061 0px 0px 20px 0px;
   .inputBox {
-    background-color:var(--todo);
-    color:var(--colorFont);
+    background-color: var(--todo);
+    color: var(--colorFont);
     height: 100%;
     width: 80%;
     border: none;
     font-family: "Josefin Sans", sans-serif;
-    &::placeholder{
+    &::placeholder {
       color: var(--colorFont);
     }
-    &:focus{
+    &:focus {
       outline: none;
     }
   }
@@ -27,14 +27,18 @@
     height: 20px;
     border: 1px solid gray;
     cursor: pointer;
-    svg{
+    svg {
       display: none;
     }
-    &:hover{
+    &:hover {
       border-color: rgb(192, 88, 243);
     }
-    &.active{
-      background: linear-gradient(to right, rgb(87, 221, 255), rgb(192, 88, 243));
+    &.active {
+      background: linear-gradient(
+        to right,
+        rgb(87, 221, 255),
+        rgb(192, 88, 243)
+      );
       border: none;
       display: flex;
       justify-content: center;
@@ -42,7 +46,3 @@
     }
   }
 }
-
-
-
-

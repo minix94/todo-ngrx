@@ -12,29 +12,22 @@ export const addTodo = createAction(
 export const setStatus = createAction(
   '[Todo] Set Status todos',
   props<{
-    status:statusModel
+    status: statusModel;
   }>()
-
-
 );
 export const resetInput = createAction(
   '[Todo] Reset Input',
   props<{
-    input:string
+    input: string;
   }>()
-
-
 );
 export const updateTodo = createAction(
   '[Todo] Update todo',
   props<{
-    todos:todo[]
+    todos: todo[];
   }>()
-
 );
-export const clearTodoCompleted = createAction(
-  '[Todo] Clear todo completed',
-);
+export const clearTodoCompleted = createAction('[Todo] Clear todo completed');
 
 export const deleteTodo = createAction(
   '[Todo] Delete todo',

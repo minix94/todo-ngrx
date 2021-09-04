@@ -1,12 +1,11 @@
-export const status:string[] = [
+export const status: string[] = [
   'All',
   'Active',
   'Completed',
   'Clear Completed',
 ];
 
-
 export interface statusModel {
-  type:string,
-  status:boolean
+  type: string;
+  status: boolean;
 }
